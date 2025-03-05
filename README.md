@@ -80,3 +80,31 @@ public:
 OUTPUT:
 
 ![image](https://github.com/user-attachments/assets/82b7a6ad-d0c4-4dad-841d-613a4e44925d)
+
+# 4. 
+
+CODE:
+
+```
+public:
+    int maxProfit(vector<int>& prices) {
+        int minPrice = INT_MAX; // Initialize minimum price to a very large value
+        int maxProfit = 0; // Initialize maximum profit to 0
+        
+        for (int price : prices) {
+            if (price < minPrice) {
+                minPrice = price; // Update minimum price if a lower price is found
+            } else if (price - minPrice > maxProfit) {
+                maxProfit = price - minPrice; // Calculate profit and update maxProfit if it's higher
+            }
+        }
+        
+        return maxProfit; // Return the maximum profit
+    }
+```
+
+OUTPUT:
+
+![image](https://github.com/user-attachments/assets/0976898e-26c9-4291-9660-006685559a8e)
+
+
